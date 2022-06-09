@@ -112,9 +112,9 @@ public class Player extends Entity {
             gp.cChecker.checkTile(this);
             // CHECK OBJECT COLLISION
             int objIndex = gp.cChecker.checkObject(this, true);
-            int chestIndex = gp.cChecker.checkObject(this, true);
+            // int chestIndex = gp.cChecker.checkObject(this, true);
             pickUpObject(objIndex);
-            pickUpObject(chestIndex);
+            // pickUpObject(chestIndex);
             //CHECK NPC COLLISION
             int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
             interactNPC(npcIndex);
@@ -183,9 +183,9 @@ public class Player extends Entity {
                         gp.ui.showMessage("You need a key to open!");
                     }
                 break;
-                case "Chest":
-                    gp.ui.gameFinished = true;
-                break;
+                // case "Chest":
+                //     gp.ui.gameFinished = true;
+                // break;
             }
             // switch(chestName){
             //     case "Chest":
