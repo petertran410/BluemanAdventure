@@ -32,10 +32,10 @@ public class Player extends Entity {
         setItems();
     }
     public void setDefaultValues() {
-        worldX = gp.tileSize * 42;
-        worldY = gp.tileSize * 42;
-        // worldX = gp.tileSize * 9;
-        // worldY = gp.tileSize * 17;
+        // worldX = gp.tileSize * 42;
+        // worldY = gp.tileSize * 42;
+        worldX = gp.tileSize * 22;
+        worldY = gp.tileSize * 9;
         speed = 4;
         direction = "right"; 
         //PLAYER STATUS.
@@ -50,6 +50,8 @@ public class Player extends Entity {
         projectile = new OBJ_FIREBALL(gp);
     }
     public void setDefaultPoisitionns() {
+        // worldX = gp.tileSize * 42;
+        // worldY = gp.tileSize * 42;
         worldX = gp.tileSize * 42;
         worldY = gp.tileSize * 42;
         direction = "up";
@@ -110,7 +112,9 @@ public class Player extends Entity {
             gp.cChecker.checkTile(this);
             // CHECK OBJECT COLLISION
             int objIndex = gp.cChecker.checkObject(this, true);
+            int chestIndex = gp.cChecker.checkObject(this, true);
             pickUpObject(objIndex);
+            pickUpObject(chestIndex);
             //CHECK NPC COLLISION
             int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
             interactNPC(npcIndex);
@@ -158,6 +162,7 @@ public class Player extends Entity {
     public void pickUpObject(int i){
         if(i != 999){
             String objectName = gp.obj[gp.currentMap][i].name;
+            // String chestName = gp.chest[gp.currentMap][i].name;
             // gp.obj[gp.currentMap][i].type == 1
             //INVENTORY ITEMS
             switch(objectName){
@@ -178,7 +183,15 @@ public class Player extends Entity {
                         gp.ui.showMessage("You need a key to open!");
                     }
                 break;
+                case "Chest":
+                    gp.ui.gameFinished = true;
+                break;
             }
+            // switch(chestName){
+            //     case "Chest":
+            //         gp.ui.gameFinished = true;
+            //     break;
+            // }
         }
     }
     public void interactMonster(int i){

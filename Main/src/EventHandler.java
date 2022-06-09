@@ -1,11 +1,12 @@
 // import java.awt.Rectangle;
 
-public class EventHandler {
-    GamePanel gp;
+public class EventHandler extends Entity{
+    // GamePanel gp;
     EventRect eventRect[][][];
     int map = 0;
     public EventHandler(GamePanel gp){
-        this.gp = gp;
+        // this.gp = gp;
+        super(gp);
         // int previousEventX, previousEventY;
         // boolean canToucheEvent = true;
         eventRect = new EventRect[gp.maxMap][gp.maxWorldCol][gp.maxWorldRow];
@@ -33,11 +34,8 @@ public class EventHandler {
     }
     public void checkEvent(){
         for(int i = 0; i < 20; i++){
-            if(hit(1, 13, 7, "left") == true){
-                teleport1(0, 8, 10, gp.dialogueState);
-            }
-            if(hit(0, 8, 10, "left") == true){
-                teleport2(1, 13, 7, gp.dialogueState);
+            if(hit(0, (int) 22.8, 39, "down") == true){
+                teleport1(1, 42, 42, gp.dialogueState);
             }
         }
         if(hit(1, 45, 31, "any") == true){

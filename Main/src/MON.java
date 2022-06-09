@@ -64,5 +64,4 @@ public class MON extends Entity {
             dropItem(new OBJ_KEY(gp));
         }
     }
-
 }

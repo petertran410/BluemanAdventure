@@ -119,7 +119,9 @@ public class Entity {
         gp.cChecker.checkObject(this, false);
         gp.cChecker.checkEntity(this, gp.npc);
         gp.cChecker.checkEntity(this, gp.monster);
-        boolean contactPlayer = false;gp.cChecker.checkPlayer(this);
+        gp.cChecker.checkEntity(this, gp.chest);
+        boolean contactPlayer = false;
+        gp.cChecker.checkPlayer(this);
         if(this.type == 2 && contactPlayer == true && this.type == 4){
             if(gp.player.invincible == false){
                 gp.player.life -= 1;
@@ -195,7 +197,8 @@ public class Entity {
                             }
                             break;
                     }
-                if(type == 2  && type == 4 && hpBarOn == true){
+                //MONSTER HEALTH        
+                if(type == 2 && hpBarOn == true || type == 4 && hpBarOn == true){
                     double oneScale = (double)gp.tileSize/maxLife;
                     double hpBarValue = oneScale * life;
 
@@ -203,9 +206,9 @@ public class Entity {
                     g2.fillRect(screenX - 1, screenY - 16, gp.tileSize + 2, 12);
                     g2.setColor(new Color(255, 0, 30));
                     g2.fillRect(screenX, screenY - 15, (int)hpBarValue, 10);
-
+                    
                     hpBarCounter++;
-                    if(hpBarCounter > 60){
+                    if(hpBarCounter > 600){
                         hpBarCounter = 0;
                         hpBarOn = false;
                     }
