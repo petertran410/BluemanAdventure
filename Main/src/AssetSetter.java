@@ -11,10 +11,6 @@ public class AssetSetter{
         gp.obj[mapNum][i].worldY = 19 * gp.tileSize;
         i++;
 
-        // gp.chest[mapNum][i] = new CHEST(gp);
-        // gp.chest[mapNum][i].worldX = gp.tileSize * 17; 
-        // gp.chest[mapNum][i].worldY = gp.tileSize * 9;
-
         gp.obj[mapNum][i] = new OBJ_DOOR(gp);
         gp.obj[mapNum][i].worldX = 28 * gp.tileSize;
         gp.obj[mapNum][i].worldY = 13 * gp.tileSize;
@@ -57,19 +53,19 @@ public class AssetSetter{
         i++;
 
         gp.obj[mapNum][i] = new OBJ_DOOR(gp);
-        gp.obj[mapNum][i].worldX = 10 * gp.tileSize;
-        gp.obj[mapNum][i].worldY = 25 * gp.tileSize;
+        gp.obj[mapNum][i].worldX = 42 * gp.tileSize;
+        gp.obj[mapNum][i].worldY = 28 * gp.tileSize;
         i++;
 
-        gp.obj[mapNum][i] = new OBJ_DOOR(gp);
-        gp.obj[mapNum][i].worldX = 13 * gp.tileSize;
-        gp.obj[mapNum][i].worldY = 31 * gp.tileSize;
-        i++;
+        // gp.obj[mapNum][i] = new OBJ_DOOR(gp);
+        // gp.obj[mapNum][i].worldX = 13 * gp.tileSize;
+        // gp.obj[mapNum][i].worldY = 31 * gp.tileSize;
+        // i++;
 
-        gp.obj[mapNum][i] = new OBJ_DOOR(gp);
-        gp.obj[mapNum][i].worldX = 17 * gp.tileSize;
-        gp.obj[mapNum][i].worldY = 32 * gp.tileSize;
-        i++;
+        // gp.obj[mapNum][i] = new OBJ_DOOR(gp);
+        // gp.obj[mapNum][i].worldX = 17 * gp.tileSize;
+        // gp.obj[mapNum][i].worldY = 32 * gp.tileSize;
+        // i++;
     }
 
     public void setNPC(){
@@ -81,8 +77,8 @@ public class AssetSetter{
         i++;
         
         gp.npc[mapNum][i] = new NPC_OLDMAN(gp);
-        gp.npc[mapNum][i].worldX = gp.tileSize * 31;
-        gp.npc[mapNum][i].worldY = gp.tileSize * 13;
+        gp.npc[mapNum][i].worldX = gp.tileSize * 26;
+        gp.npc[mapNum][i].worldY = gp.tileSize * 14;
         i++;
         
         gp.npc[mapNum][i] = new NPC_OLDMAN(gp);
@@ -92,7 +88,7 @@ public class AssetSetter{
 
         gp.npc[mapNum][i] = new NPC_OLDMAN(gp);
         gp.npc[mapNum][i].worldX = gp.tileSize * 24;
-        gp.npc[mapNum][i].worldY = gp.tileSize * 27;
+        gp.npc[mapNum][i].worldY = gp.tileSize * 28;
         i++;
 
         gp.npc[mapNum][i] = new NPC_OLDMAN(gp);
@@ -137,7 +133,7 @@ public class AssetSetter{
         int i = 0;
         gp.monster[mapNum][i] = new MON(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize * 34;
-        gp.monster[mapNum][i].worldY = gp.tileSize * 14;
+        gp.monster[mapNum][i].worldY = gp.tileSize * 13;
         i++;
 
         gp.monster[mapNum][i] = new MON(gp);

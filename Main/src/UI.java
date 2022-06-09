@@ -176,7 +176,7 @@ public class UI {
         g2.setColor(new Color(153, 153, 153));
         g2.drawString(text, x + 5, y + 5);
         // //MAIN COLOR
-        g2.setColor(Color.red);
+        g2.setColor(Color.white);
         g2.drawString(text, x, y);
         //MENU
         g2.setFont(g2.getFont().deriveFont(Font.BOLD, 30F));
